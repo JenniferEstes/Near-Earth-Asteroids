@@ -7,4 +7,4 @@ Install Instructions:
 
 Contributors Guide:
 
-Link to License:
+Link to License: [MIT](https://github.com/JenniferEstes/Near-Earth-Asteroids/blob/main/LICENSE)

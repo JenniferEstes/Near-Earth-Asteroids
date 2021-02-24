@@ -11,4 +11,4 @@ class CLI
 end
 
 #get inputs and shows strings as well as puts statements
-#no instance method
+#how am i displaying and how am i interacting with the user?
