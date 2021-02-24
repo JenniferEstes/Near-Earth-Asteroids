@@ -1,2 +1,3 @@
-Class CLI
+class CLI
+  puts "works!"
 end
