@@ -10,5 +10,5 @@ class CLI
     end
 end
 
-#get inputs and shows strings and puts statements
+#get inputs and shows strings as well as puts statements
 #no instance method

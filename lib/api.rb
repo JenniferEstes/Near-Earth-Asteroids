@@ -11,7 +11,7 @@ class API
         asteroid_response_hash = HTTParty.get(@url + "/neo/rest/v1/neo/browse?start_date=2020-01-01&end_date=2021-01-01&api_key=ZAjsIZd8HZWafuc0jniNDMocBpvYSb9woTbe619H") #gem does JSON parsing
         asteroid_hash_array = asteroid_response_hash["near_earth_objects"] #Returns array of hashes that include asteroids
         binding.pry
-        self.create_asteroid_objects(asteroid_hash_array)
+        self.create_asteroid_objects(asteroid_hash_array) #pass array in to create asteroid objects by using next defined method.
     end
 
     #pry
@@ -22,8 +22,8 @@ class API
     #asteroid_response_hash["near_earth_objects"][0] - Get first asteroid and it's attributes
     #asteroid_response_hash["near_earth_objects"][0].keys - Get keys of first asteroid
 
-    def create_asteroid_objects(near_earth_objects)
-        near_earth_objects.each {|asteroid_hash| Asteroid.new(asteroid_hash)} #Gather asteroid information from hash 
+    def create_asteroid_objects(asteroid_hash_array) #Takes in an array of near earth objects 
+        asteroid_hash_array.each {|asteroid_hash| Asteroid.new(asteroid_hash)} #Gather asteroid information from hash 
     end
 end
 
