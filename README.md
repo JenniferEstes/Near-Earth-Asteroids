@@ -1,9 +1,7 @@
-# Near-Earth-Astroids
-
-test push 1
+# Near-Earth-Asteroids
 
 Description: 
-Use Nasa API to list all near-earth astroids that approached Earth between 1-1-2020 and 1-1-2021.
+Use Nasa API to list all near-earth asteroids that approached Earth between 01-01-2020 and 01-1-2021.
 
 Install Instructions:
 
