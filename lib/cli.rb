@@ -1,9 +1,9 @@
 class CLI
 
-    # def run
-    #     greeting
-    #     API.grab_data #from API
-    # end
+    def run
+        greeting
+        API.grab_data #from API
+    end
 
     def greeting
         puts "Welcome!"
@@ -13,15 +13,32 @@ class CLI
     end
    
     def menu
-        input = get.strip.downcase
-            if input == "list"
-                puts list
-            elsif input == "exit"
-                puts "exit" 
-            else  
-                puts "Invalid entry. Please try again."
+        input = gets.strip.downcase
+
+            if input == "2020"
+                asteroids_list
                 menu
-            end
+            elsif input == "exit"
+                goodbye 
+            else  
+                invalid_entry
+            end 
     end
-     
+
+    def invalid_entry
+        puts "Invalid entry. Please try again."
+        menu
+    end
+
+    def asteroids_list
+        "puts 1. Asteriod 1"
+        "puts 2. Asteriod 2"
+        "puts 3. Asteriod 3"
+        "puts 4. Asteriod 4"
+    end
+
+    def goodbye
+        puts "Goodbye!"
+    end
+    
 end
