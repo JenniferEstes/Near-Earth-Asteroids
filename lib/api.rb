@@ -11,7 +11,6 @@ class API
     def get_asteroid_data
         asteroid_response_hash = HTTParty.get(@base_url + "?start_date=2020-01-01&end_date=2021-01-01&api_key=#{ENV['API_KEY']}") #gem does JSON parsing
         asteroid_hash_array = asteroid_response_hash["near_earth_objects"] #Returns array of hashes that include asteroids
-        binding.pry
         self.create_asteroid_objects(asteroid_hash_array) #pass array in to create asteroid objects by using next defined method.
     end
 
