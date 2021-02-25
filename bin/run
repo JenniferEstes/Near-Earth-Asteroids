@@ -2,8 +2,4 @@
 
 require_relative '../config/environment'
 
-API.new.get_asteroid_data 
-
-asteroid_array = Asteroid.new
-
 CLI.new.run
