@@ -14,10 +14,10 @@ class CLI
    
 
     def menu
-        input = gets.strip.downcase
+        input = gets.strip
 
             if input == "2020"
-                asteroids_list
+                asteroid_list
             elsif input == "exit"
                 goodbye 
             else  
@@ -27,28 +27,29 @@ class CLI
 
     def invalid_entry
         puts "Invalid entry. Please try again."
-        menu
+        menu #to go back through the selection process 
     end
 
     def goodbye
         puts "Goodbye!"
     end
 
-    def asteroids_list
+    def asteroid_list
         Asteroid.all.each_with_index {|asteroid, index|
           puts "#{index += 1}. #{asteroid.name_limited}"
         }
-        puts "Select the asteroid name to get more information:"
-        input = gets.strip.downcase #storing user input
+        puts "Select the asteroid:"
+        input = gets.strip #storing user input
         asteroid_selection(input) #passing user input to next method as asteroid_name
     end 
 
-    def asteroid_selection(asteroid_name)  
-        variable = Asteroid.find_by_name(asteroid_name.downcase)
+    def asteroid_selection(name_limited)  
+        variable = Asteroid.find_by_name(name_limited)
+        binding.pry
         variable.each {|i|
         puts "Full Name: #{i.name}"
-        puts "Last date observed: #{i.orbital_data["last_observation_date"]}"}
-        puts "Maximum possible diameter: #{i.estimated_diameter["miles"]["estimated_diameter_max"]} miles"
+        puts "Last date observed: #{i.orbital_data["last_observation_date"]}"
+        puts "Maximum possible diameter: #{i.estimated_diameter["miles"]["estimated_diameter_max"]} miles"}
     end
 
 end

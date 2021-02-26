@@ -2,4 +2,4 @@
 
 require_relative '../config/environment'
 
-CLI.new.run
+CLI.new.run #creating new instance of cli.rb 
