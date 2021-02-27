@@ -7,9 +7,7 @@ This program uses data from a NASA API to provide users with information on aste
 <br/>
 
 ## Usage
-View this [video]() to see a brief description of how the program works.
-
-PASTE VIDEO
+View this [video](https://www.loom.com/share/5e54afb9e66c40fb95db156accefb9c0) to see a brief description of how the program works.
 <br/>
 <br/>
 <br/>
