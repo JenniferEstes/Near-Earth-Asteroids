@@ -13,13 +13,13 @@ View this [video](https://www.loom.com/share/5e54afb9e66c40fb95db156accefb9c0) t
 <br/>
 
 ## Install Instructions
-### Add the following gems to your application's Gemfile: <br/><br/>
+### Add the following gems to your application's Gemfile <br/><br/>
 gem 'dotenv' <br/>
 gem 'httparty'
 <br/>
 <br/>
 
-### Execute in your terminal: <br/><br/>
+### Execute in your terminal <br/><br/>
 bundle install
 <br/>
 <br/>
